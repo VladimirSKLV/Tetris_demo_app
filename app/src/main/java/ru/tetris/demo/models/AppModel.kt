@@ -5,7 +5,6 @@ import ru.tetris.demo.constants.CellConstants
 import ru.tetris.demo.constants.FieldConstants
 import ru.tetris.demo.helper.HelperFunctions.array2dOfByte
 import ru.tetris.demo.storage.AppPreferences
-import java.text.FieldPosition
 
 class AppModel {
 
