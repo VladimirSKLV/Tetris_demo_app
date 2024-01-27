@@ -1,6 +1,5 @@
 package ru.tetris.demo.constants
 
 enum class FieldConstants(val value: Int) {
-    COLUMN_COUNT(10),
-    ROW_COUNT(20);
+    COLUMN_COUNT(10), ROW_COUNT(20)
 }

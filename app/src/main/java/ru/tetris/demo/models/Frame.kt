@@ -1,6 +1,6 @@
 package ru.tetris.demo.models
 
-import ru.tetris.demo.helper.HelperFunctions.array2dOfByte
+import ru.tetris.demo.helper.array2dOfByte
 
 class Frame(private val width: Int) {
     val data: ArrayList<ByteArray> = ArrayList()
@@ -15,7 +15,7 @@ class Frame(private val width: Int) {
         return this
     }
 
-    fun as2ByteArray(): Array<ByteArray> {
+    fun as2dByteArray(): Array<ByteArray> {
         val bytes = array2dOfByte(data.size, width)
         return data.toArray(bytes)
     }

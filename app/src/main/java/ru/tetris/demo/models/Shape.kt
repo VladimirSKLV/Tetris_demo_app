@@ -8,6 +8,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
                 .addRow("11")
         }
     },
+
     Tetromino2(2, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {
@@ -24,6 +25,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
             }
         }
     },
+
     Tetromino3(2, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {
@@ -40,6 +42,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
             }
         }
     },
+
     Tetromino4(2, 2) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {
@@ -54,6 +57,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
             }
         }
     },
+
     Tetromino5(4, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {
@@ -79,6 +83,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
             }
         }
     },
+
     Tetromino6(4, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {
@@ -104,6 +109,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int) {
             }
         }
     },
+
     Tetromino7(4, 1) {
         override fun getFrame(frameNumber: Int): Frame {
             return when (frameNumber) {

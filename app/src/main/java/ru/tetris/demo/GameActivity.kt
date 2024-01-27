@@ -15,11 +15,15 @@ class GameActivity : AppCompatActivity() {
 
     var tvHighScore: TextView? = null
     var tvCurrentScore: TextView? = null
+    var btnLeft: Button? = null
+    var btnRight: Button? = null
+    var btnDown: Button? = null
+    var btnRotate: Button? = null
     var appPreferences: AppPreferences? = null
     private lateinit var tetrisView: TetrisView
     private val appModel: AppModel = AppModel()
 
-    @SuppressLint("MissingInflatedId", "ResourceType")
+    @SuppressLint("MissingInflatedId", "ResourceType", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -27,13 +31,26 @@ class GameActivity : AppCompatActivity() {
         appModel.setPreferences(appPreferences)
 
         val btnRestart = findViewById<Button>(R.id.btn_restart)
-        tvHighScore = findViewById(R.string.high_score)
-        tvCurrentScore = findViewById(R.string.current_score)
+        tvHighScore = findViewById(R.id.tv_high_score)
+        tvCurrentScore = findViewById(R.id.tv_current_score)
         tetrisView = findViewById(R.id.view_tetris)
         tetrisView.setActivity(this)
         tetrisView.setModel(appModel)
+
         tetrisView.setOnTouchListener(this::onTetrisViewTouch)
         btnRestart.setOnClickListener(this::btnRestartClick)
+
+        btnLeft = findViewById(R.id.btn_left)
+        btnLeft?.setOnClickListener { moveTetromino(AppModel.Motions.LEFT) }
+
+        btnDown = findViewById(R.id.btn_down)
+        btnDown?.setOnClickListener { moveTetromino(AppModel.Motions.DOWN) }
+
+        btnRight = findViewById(R.id.btn_right)
+        btnRight?.setOnClickListener { moveTetromino(AppModel.Motions.RIGHT) }
+
+        btnRotate = findViewById(R.id.btn_rotate)
+        btnRotate?.setOnClickListener { moveTetromino(AppModel.Motions.ROTATE) }
 
         updateHighScore()
         updateCurrentScore()

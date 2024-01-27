@@ -2,12 +2,16 @@
 <resources>
     <string name="app_name">Tetris_demo</string>
     <string name="game_name">ТЕТРИС</string>
-    <string name="high_score_default">"Лучший счёт: 0"</string>
+    <string name="high_score_default">"Лучший счёт: "</string>
     <string name="new_game">Новая игра</string>
     <string name="reset_score">Сбросить счёт</string>
     <string name="exit">Выход</string>
-    <string name="score_success_reset">Счёт успешно сброшен!</string>
     <string name="current_score">Текущий счёт</string>
     <string name="high_score">Лучший счёт</string>
     <string name="btn_restart">Заново</string>
+    <string name="succes_reset">Счёт успешно сброшен</string>
+    <string name="btn_left">⇦</string>
+    <string name="btn_down">⇩</string>
+    <string name="btn_right">⇨</string>
+    <string name="btn_rotate">↻</string>
 </resources>
